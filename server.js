@@ -7,6 +7,7 @@ const port = 3000
 // set up drinks data so it can be required
 const drinks = require("./models/drinks.js")
 
+// ========== ROUTES ==========
 
 // include a get route 
 app.get("/", (req, res) => {
