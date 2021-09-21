@@ -9,7 +9,7 @@ const drinks = require("./models/drinks")
 
 // include a get route 
 app.get("/", (req, res) => {
-    res.send('Welcome to the Gitpup App!')
+    res.send('Welcome to the Gitpub App!')
 })
 
 // get route for drinks
