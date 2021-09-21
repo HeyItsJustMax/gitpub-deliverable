@@ -6,7 +6,19 @@
     </head>
     <body>
         <h1>Welcome To gitPub!</h1>
-        <a href="/drinks">Back to Index</a><br>
+        <ul>
+
+          <% for(let i = 0; i < allDrinks.length; i++) { %>
+          
+              <li>
+                  <a href="/drinks/<%= i %>">
+                    <%= allDrinks[i].name %>
+                  </a>
+              </li>
+            
+          <% } %>
+
+        </ul>
         
         <style type="text/css">
             body {
