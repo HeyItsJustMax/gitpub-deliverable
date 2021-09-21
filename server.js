@@ -14,17 +14,19 @@ app.get("/", (req, res) => {
     res.send('Welcome to the Gitpub App!')
 })
 
-// get route for drinks
+// INDEX ROUTE - get route for drinks
 app.get("/drinks/", (req, res) => {
     res.render("drinks_index.ejs", { allDrinks: drinks, })
 })
 
-// get route for /drinks/:id
+// SHOW ROUTE - get route for /drinks/:id
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    let photo = drinks[req.params.id].image
+    res.render("drinks_show.ejs", { drink: drinks[req.params.id], photo: photo
+    })
 })
 
-// set up app to listen to assigned port#
+// LISTENER - set up app to listen to assigned port#
 app.listen(port, () => {
         console.log('listening')
     }
